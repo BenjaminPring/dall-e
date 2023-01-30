@@ -1,0 +1,119 @@
+to use vite: vitejs.dev
+click get started
+cd client
+npm create vite@latest ./
+
+install tailwind.css
+framework guides (vite)
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+in tailwind.config.cjs:
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+in terminal:
+npm install file-saver
+
+to run vite:
+npm run dev
+
+in index.html:
+// this imports the Inter font
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+installing React-router-dom:
+npm install react-router-dom
+
+in the root folder:
+create a folder 'server'
+in the terminal:
+cd server
+then: npm init -y
+
+installing dependencies in the server folder:
+cloudinary - to store our images
+cors - for cross origin requests
+dotenv - for storing secrets
+npm install cloudinary cors dotenv express mongoose nodemon openai
+
+in package.json:
+"type": "module",
+
+create a new file: index.js
+
+to start server:
+npm start
+
+create a function that connects our server app to MongoDB:
+create a new folder: mongodb
+in mongodb: create a new file connect.js
+
+
+connect to mongoDB:
+in the browser:
+mongodb.com/atlas/database
+click the try for free button
+sign up with googl
+create a new project
+project name: dall-e
+add current IP address
+then Build a Database
+select the free option
+choose a server closest to you 
+create cluster
+in security:
+go to Database Access
+click 'connect'
+fill in username and password
+Choose a connection method: Connect your application
+copy your server storing
+
+in server: create a .env file
+in .env:
+MONGODB_URL="mongodb+srv://benpring:<password>@cluster0.h5710vd.mongodb.net/?retryWrites=true&w=majority"
+
+for <password>: your password for the username in MongoDB
+
+restart server (everytime you update .env)
+
+inside mongodb folder:
+create a folder: models
+in models: post.js
+
+to get API key from OpenAI:
+in the browser:
+login to openai.com
+
+click on user profile and choose view API keys
+create new secret key, then add the secret key to the .env file
+
+then restart server
+
+// to store, and upload images for the app:
+in cloudinary.com:
+in the dashboard: copy cloud name, key, and secret. Add this variable in the .env file
+
+to deploy:
+close all folders and ctr C both terminals
+only one terminal now is needed
+cd .. into the root (dalle_clone)
+run the command: git init
+
+in the main directory:
+create a .gitignore file
+in the .gitignore file, add:
+node_modules
+.env
+
+then:
+git add .
